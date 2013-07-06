@@ -1,8 +1,8 @@
 package com.learn.demo02;
 
 import android.test.ActivityInstrumentationTestCase2;
-
-import com.learn.demo02.MainActivity;
+import android.view.View;
+import android.widget.TextView;
 
 
 /**
@@ -17,8 +17,52 @@ import com.learn.demo02.MainActivity;
  */
 public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActivity> {
 
+    private MainActivity mainActivity = null;
+    private MainActivity activity;
+    private TextView helloText;
+
     public MainActivityTest() {
         super("com.learn.demo02", MainActivity.class);
     }
+
+    @Override
+    protected void setUp() throws Exception {
+        super.setUp();
+
+        setActivityInitialTouchMode(false);
+        activity = getActivity();
+        helloText = (TextView) activity.findViewById(R.id.hello_text);
+    }
+
+    public void test_pre_conditions() {
+
+        assertEquals(helloText.getText(),"Hello World, MainActivity");
+
+    }
+
+
+
+
+
+
+
+//    @Override
+//    protected void setUp() throws Exception {
+//        try {
+//            super.setUp();
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//
+//        Intent intent = new Intent();
+//
+//        intent.setClassName("com.learn.demo01", MainActivity.class.getName());
+//
+//        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+//        mainActivity = (MainActivity) getInstrumentation().startActivitySync(intent);
+//
+//
+//    }
+
 
 }

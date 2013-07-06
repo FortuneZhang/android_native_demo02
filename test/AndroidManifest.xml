@@ -16,7 +16,7 @@
     "adb shell am instrument -w com.learn.demo02.tests/android.test.InstrumentationTestRunner"
     -->
 
-    <uses-sdk android:minSdkVersion="8">
+    <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="15" >
 
     </uses-sdk>
     <instrumentation android:name="android.test.InstrumentationTestRunner"
