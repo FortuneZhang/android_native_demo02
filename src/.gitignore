@@ -1,5 +1,5 @@
 gen
-.iml
+*.iml
 .eclipse
 .setting
 bin

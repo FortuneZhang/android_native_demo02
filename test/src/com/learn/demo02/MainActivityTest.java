@@ -2,6 +2,9 @@ package com.learn.demo02;
 
 import android.test.ActivityInstrumentationTestCase2;
 
+import com.learn.demo02.MainActivity;
+
+
 /**
  * This is a simple framework for a test of an Application.  See
  * {@link android.test.ApplicationTestCase ApplicationTestCase} for more information on

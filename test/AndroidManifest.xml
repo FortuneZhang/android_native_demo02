@@ -15,6 +15,10 @@
     the package of com.learn.demo02.  To run the tests use the command:
     "adb shell am instrument -w com.learn.demo02.tests/android.test.InstrumentationTestRunner"
     -->
+
+    <uses-sdk android:minSdkVersion="8">
+
+    </uses-sdk>
     <instrumentation android:name="android.test.InstrumentationTestRunner"
                      android:targetPackage="com.learn.demo02"
                      android:label="Tests for com.learn.demo02"/>
